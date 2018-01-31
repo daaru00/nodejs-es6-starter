@@ -1,0 +1,11 @@
+{
+  "presets": ["es2015"],
+  "minified": true,
+  "comments": false,
+  "env": {
+    "dev": {
+      "minified": false,
+      "sourceMaps": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# Configurations
+
+image: node:9.4.0
+
+# Pipelines
+
+pipelines:
+  default:
+    - step:
+        name: Build
+        script:
+          - npm install
+          - npm run build
+        artifacts:
+          - dist/**
+          - node_modules/**
+    - step:
+        name: Lint
+        script:
+          - npm run lint
+    - step:
+        name: Test
+        script:
+          - npm run test
